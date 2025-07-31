@@ -59,7 +59,7 @@ class GatewayTest extends TestCase
 
         $token = 'meu-token';
         $httpClient
-            ->expects($this->at(0))
+            ->expects($this->exactly(0))
             ->method('send')
             ->willReturn($token);
 

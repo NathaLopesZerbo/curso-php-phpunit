@@ -27,7 +27,7 @@ class OrderServiceTest extends TestCase
     private $creditCard;
     private $orderService;
 
-    public function setUp()
+    public function setup(): void
     {
         $this->badWordsValidator = $this->createMock(BadWordsValidator::class);
         $this->paymentService = $this->createMock(PaymentService::class);

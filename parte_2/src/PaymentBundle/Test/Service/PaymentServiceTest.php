@@ -20,7 +20,7 @@ class PaymentServiceTest extends TestCase
     private $item;
     private $creditCard;
 
-    public function setUp()
+    public function setup(): void
     {
         $this->gateway = $this->createMock(Gateway::class);
         $this->paymentTransactionRepository = $this->createMock(PaymentTransactionRepository::class);
@@ -71,7 +71,7 @@ class PaymentServiceTest extends TestCase
         $this->paymentService->pay($this->customer, $this->item, $this->creditCard);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->gateway);
     }

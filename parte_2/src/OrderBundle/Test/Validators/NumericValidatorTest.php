@@ -22,10 +22,25 @@ class NumericValidatorTest extends TestCase
     public function valueProvider()
     {
         return [
-            'shouldBeValidWhenValueIsANumber' => ['value' => 20, 'expectedResult' => true],
-            'shouldBeValidWhenValueIsANumericString' => ['value' => '20', 'expectedResult' => true],
-            'shouldNotBeValidWhenValueIsNotANumber' => ['value' => 'bla', 'expectedResult' => false],
-            'shouldNotBeValidWhenValueIsEmpty' => ['value' => '', 'expectedResult' => false],
+            'shouldBeValidWhenValueIsANumber' => [
+                'value' => 20, 
+                'expectedResult' => true
+            ],
+
+            'shouldBeValidWhenValueIsANumericString' => [
+                'value' => '20', 
+                'expectedResult' => true
+            ],
+
+            'shouldNotBeValidWhenValueIsNotANumber' => [
+                'value' => 'bla', 
+                'expectedResult' => false
+            ],
+
+            'shouldNotBeValidWhenValueIsEmpty' => [
+                'value' => '', 
+                'expectedResult' => false
+            ],
         ];
     }
 }

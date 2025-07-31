@@ -22,10 +22,25 @@ class CreditCardNumberValidatorTest extends TestCase
     public function valueProvider()
     {
         return [
-            'shouldBeValidWhenValueIsANumber' => ['value' => 4928148506666302, 'expectedResult' => true],
-            'shouldBeValidWhenValueIsACreditCardAsString' => ['value' => '4928148506666302', 'expectedResult' => true],
-            'shouldNotBeValidWhenValueIsNotACreditCard' => ['value' => '12738', 'expectedResult' => false],
-            'shouldNotBeValidWhenValueIsEmpty' => ['value' => '', 'expectedResult' => false]
+            'shouldBeValidWhenValueIsANumber' =>[
+                'value' => 4928148506666302, 
+                'expectedResult' => true
+        ],
+
+            'shouldBeValidWhenValueIsACreditCardAsString' => [
+                'value' => '4928148506666302', 
+                'expectedResult' => true
+            ],
+
+            'shouldNotBeValidWhenValueIsNotACreditCard' => [
+                'value' => '12738', 
+                'expectedResult' => false
+            ],
+
+            'shouldNotBeValidWhenValueIsEmpty' => [
+                'value' => '', 
+                'expectedResult' => false
+            ]
         ];
     }
 }
